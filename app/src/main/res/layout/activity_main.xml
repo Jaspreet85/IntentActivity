@@ -10,14 +10,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Intent Data Passing"
+        android:text="@string/intent_data_passing"
         android:textSize="20sp"
         android:textStyle="bold"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Name(Double)"
+        android:text="@string/name_string"
         android:textSize="20sp"
         android:textStyle="bold"
         />
@@ -25,14 +25,15 @@
         android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"
+        android:hint="@string/name"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:inputType="text"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Age(Digit)"
+        android:text="@string/age_number"
         android:textSize="20sp"
         android:textStyle="bold"
         />
@@ -40,14 +41,16 @@
         android:id="@+id/etAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Age"
+        android:hint="@string/age"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:inputType="number"
+        android:maxLength="3"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gender(char)"
+        android:text="@string/gender_char"
         android:textSize="20sp"
         android:textStyle="bold"
         />
@@ -55,23 +58,25 @@
         android:id="@+id/etGender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="M or F"
+        android:hint="@string/m_or_f"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:inputType="text"
+        android:maxLength="1"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email(String)"
+        android:text="@string/id_double"
         android:textSize="20sp"
         android:textStyle="bold"
         />
 
     <EditText
-        android:id="@+id/etMail"
+        android:id="@+id/etID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"
+        android:hint="@string/id"
         android:textSize="20sp"
         android:textStyle="bold"
         android:inputType="textEmailAddress"
@@ -79,7 +84,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mobile Number(long)"
+        android:text="@string/mobile_number_long"
         android:textSize="20sp"
         android:textStyle="bold"
         />
@@ -90,11 +95,13 @@
         android:hint="Mobile Number"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:inputType="number"
+        android:maxLength="10"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Salary(Float)"
+        android:text="@string/salary_float"
         android:textSize="20sp"
         android:textStyle="bold"
         />
@@ -102,14 +109,15 @@
         android:id="@+id/etSalary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Salary"
+        android:hint="@string/salary"
         android:textSize="20sp"
+        android:inputType="numberDecimal"
         android:textStyle="bold"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Above information is correct(Boolean)"
+        android:text="@string/above_information_is_correct_boolean"
         android:textSize="20sp"
         android:textStyle="bold"
         />
@@ -125,7 +133,7 @@
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register"
+        android:text="@string/register"
         android:textSize="20sp"
         android:textStyle="bold"
         />

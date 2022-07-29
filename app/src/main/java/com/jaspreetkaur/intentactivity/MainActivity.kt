@@ -7,16 +7,14 @@ import android.widget.Button
 import android.widget.EditText
 
 class MainActivity : AppCompatActivity() {
-    lateinit var etName : EditText
-    lateinit var etAge : EditText
-    lateinit var etGender : EditText
-    lateinit var etMail : EditText
-    lateinit var etNumber : EditText
+    lateinit var etName: EditText
+    lateinit var etAge: EditText
+    lateinit var etGender: EditText
+    lateinit var etID: EditText
+    lateinit var etNumber: EditText
     lateinit var etSalary : EditText
     lateinit var etInfo : EditText
-
-
-    lateinit var btnRegister :Button
+    lateinit var btnRegister: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,33 +23,24 @@ class MainActivity : AppCompatActivity() {
         etName = findViewById(R.id.etName)
         etAge = findViewById(R.id.etAge)
         etGender = findViewById(R.id.etGender)
+        etID = findViewById(R.id.etID)
         etNumber = findViewById(R.id.etNumber)
         etSalary = findViewById(R.id.etSalary)
         etInfo = findViewById(R.id.etInfo)
-        etMail = findViewById(R.id.etMail)
+
         btnRegister = findViewById(R.id.btnRegister)
 
         btnRegister.setOnClickListener {
-            System.out.println("REGISTER Clicked")
-
-            var name = etName.text.toString().toDouble()
-            var age = etAge.text.toString().toInt()
-            var gender = etGender.text.toString().toCharArray()
-            var email = etMail.text.toString()
-            var number = etNumber.text.toString()
-            var salary = etSalary.text.toString().toFloat()
-            var info = etInfo.text.toString().toBoolean()
-
 
             var intent = Intent(this, SecondActivity::class.java)
 
-            intent.putExtra("name",name)
-            intent.putExtra("age", age)
-            intent.putExtra("gender", gender)
-            intent.putExtra("email", email)
-            intent.putExtra("number", number)
-            intent.putExtra("salary", salary)
-            intent.putExtra("info",info)
+            intent.putExtra("name", etName.text.toString())
+            intent.putExtra("age", Integer.parseInt(etAge.text.toString()))
+            intent.putExtra("gender", etGender.text.toString())
+            intent.putExtra("email", (etID.text.toString()).toDouble())
+            intent.putExtra("number", (etNumber.text.toString()).toLong())
+            intent.putExtra("salary", (etSalary.text.toString()).toFloat())
+            intent.putExtra("info",(etInfo.text.toString()).toBoolean())
             startActivity(intent)
         }
     }
